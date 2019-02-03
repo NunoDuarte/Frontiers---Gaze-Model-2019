@@ -25,18 +25,17 @@
 
 
 \def\keyFont{\fontsize{8}{11}\helveticabold }
-\def\firstAuthorLast{Sample {et~al.}} %use et al only if is more than 1 author
-\def\Authors{First Author\,$^{1,*}$, Co-Author\,$^{2}$ and Co-Author\,$^{1,2}$}
+\def\firstAuthorLast{Ferreira Duarte {et~al.}} %use et al only if is more than 1 author
+\def\Authors{Nuno Ferreira Duarte\,$^{1, * \href{https://orcid.org/0000-0002-1396-6774} {\includegraphics[scale=0.05]{Images/orcid}}}$,  Mirko Rakovi\'{c}\,$^{1,2 \href{https://orcid.org/0000-0002-8818-2739}{\includegraphics[scale=0.05]{Images/orcid}}}$ and Jos\'{e} Santos-Victor\,$^{1 \href{https://orcid.org/0000-0002-9036-1728}{\includegraphics[scale=0.05]{Images/orcid}}}$}
 % Affiliations should be keyed to the author's name with superscript numbers and be listed as follows: Laboratory, Institute, Department, Organization, City, State abbreviation (USA, Canada, Australia), and Country (without detailed address information such as city zip codes or street names).
 % If one of the authors has a change of address, list the new address below the correspondence details using a superscript symbol and use the same symbol to indicate the author in the author list.
-\def\Address{$^{1}$Laboratory X, Institute X, Department X, Organization X, City X , State XX (only USA, Canada and Australia), Country X \\
-$^{2}$Laboratory X, Institute X, Department X, Organization X, City X , State XX (only USA, Canada and Australia), Country X  }
+\def\Address{$^{1}$Vislab, Institute for Systems and Robotics, Instituto Superior T\'{e}cnico, Universidade de Lisboa, Portugal \\
+$^{2}$Faculty of Technical Sciences, University of Novi Sad, Novi Sad, Serbia}
 % The Corresponding Author should be marked with an asterisk
 % Provide the exact contact address (this time including street name and city zip code) and email of the corresponding author
-\def\corrAuthor{Corresponding Author}
+\def\corrAuthor{Nuno Ferreira Duarte}
 
-\def\corrEmail{email@uni.edu}
-
+\def\corrEmail{nferreiraduarte@isr.tecnico.ulisboa.pt}
 
 
 
@@ -44,7 +43,7 @@ $^{2}$Laboratory X, Institute X, Department X, Organization X, City X , State XX
 \onecolumn
 \firstpage{1}
 
-\title[Running Title]{Article Title} 
+\title[Action Alignment from Gaze Cues in Human-Robot Interactions]{Do Humans Align Better to Robots When They Behave Like Humans? Action Alignment from Gaze Cues in Human-Robot Interactions} 
 
 \author[\firstAuthorLast ]{\Authors} %This field will be automatically populated
 \address{} %This field will be automatically populated
@@ -59,15 +58,15 @@ $^{2}$Laboratory X, Institute X, Department X, Organization X, City X , State XX
 
 \begin{abstract}
 
-%%% Leave the Abstract empty if your article does not require one, please see the Summary Table for full details.
-\section{}
-For full guidelines regarding your manuscript please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines}{Author Guidelines}.
+Humans can read the intentions from the non-verbal communication cues emitted by other humans during action-in-interactions \citep{duarte2018action}. Gaze cues have the particularity of expressing the intention of the human executing the action and, when observing an action being executed, express the exploration that humans perform to understand the other’s intention. This interesting behavior can be used to evaluate robotic methods that express robot’s intent in human-robot interactions. 
 
-As a primary goal, the abstract should render the general significance and conceptual advance of the work clearly accessible to a broad readership. References should not be cited in the abstract. Leave the Abstract empty if your article does not require one, please see \href{http://www.frontiersin.org/about/AuthorGuidelines#SummaryTable}{Summary Table} for details according to article type. 
+Our approach consists of using a gaze model biologically inspired in a human-human experiment of a dyadic interaction where humans have to place an object on a table or the give the object to the other participant, in a human-robot interaction scenario \citep{duarte2018actionalignment}. This model utilizes the gaze behavior of humans to understand the action as well as to express intention of the action to execute. With the model, a robotic controller was created to integrate human-inspired gaze behavior to a humanoid robot during action execution, and to give human readability of human’s action from gaze cues. 
+
+To evaluate the controller, human participants will interact with the humanoid robot in a dyadic interaction where the gaze cues will be recorded for analysis of the physiological of a human-robot object hand-over \citep{DEHAIS2011hrhandover}. We will compare this controller with a second controller where the robot does not convey human-inspired gaze behavior. 
 
 
 \tiny
- \keyFont{ \section{Keywords:} keyword, keyword, keyword, keyword, keyword, keyword, keyword, keyword} %All article types: you may provide up to 8 keywords; at least 5 are mandatory.
+ \keyFont{ \section{Keywords:} gaze, human-human interaction, human-robot interaction, legibility, handover} %All article types: you may provide up to 8 keywords; at least 5 are mandatory.
 \end{abstract}
 
 \input{1_introduction.tex}
@@ -90,13 +89,14 @@ The Author Contributions section is mandatory for all articles, including articl
 Details of all funding sources should be provided, including grant numbers if applicable. Please ensure to add all necessary funding information, as after publication this is no longer possible.
 
 \section*{Acknowledgments}
-This is a short text to acknowledge the contributions of specific colleagues, institutions, or agencies that aided the efforts of the authors.
+We thank all colleagues that helped preparing and conducting the experiments, and the people that participated in the human studies. 
+This work was supported by EU H2020 project 752611 - ACTICIPATE, FCT project UID/EEA/50009/2013 and RBCog-Lab research infrastructure.
 
-\section*{Supplemental Data}
- \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} should be uploaded separately on submission, if there are Supplementary Figures, please include the caption in the same file as the figure. LaTeX Supplementary Material templates can be found in the Frontiers LaTeX folder.
+% \section*{Supplemental Data}
+%  \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} should be uploaded separately on submission, if there are Supplementary Figures, please include the caption in the same file as the figure. LaTeX Supplementary Material templates can be found in the Frontiers LaTeX folder.
 
-\section*{Data Availability Statement}
-The datasets [GENERATED/ANALYZED] for this study can be found in the [NAME OF REPOSITORY] [LINK].
+% \section*{Data Availability Statement}
+% The datasets [GENERATED/ANALYZED] for this study can be found in the [NAME OF REPOSITORY] [LINK].
 % Please see the availability of data guidelines for more information, at https://www.frontiersin.org/about/author-guidelines#AvailabilityofData
 
 \bibliographystyle{frontiersinSCNS_ENG_HUMS} % for Science, Engineering and Humanities and Social Sciences articles, for Humanities and Social Sciences articles please include page numbers in the in-text citations
@@ -106,32 +106,5 @@ The datasets [GENERATED/ANALYZED] for this study can be found in the [NAME OF RE
 %%% Make sure to upload the bib file along with the tex file and PDF
 %%% Please see the test.bib file for some examples of references
 
-\section*{Figure captions}
-
-%%% Please be aware that for original research articles we only permit a combined number of 15 figures and tables, one figure with multiple subfigures will count as only one figure.
-%%% Use this if adding the figures directly in the mansucript, if so, please remember to also upload the files when submitting your article
-%%% There is no need for adding the file termination, as long as you indicate where the file is saved. In the examples below the files (logo1.eps and logos.eps) are in the Frontiers LaTeX folder
-%%% If using *.tif files convert them to .jpg or .png
-%%%  NB logo1.eps is required in the path in order to correctly compile front page header %%%
-
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=10cm]{logo1}% This is a *.eps file
-\end{center}
-\caption{ Enter the caption for your figure here.  Repeat as  necessary for each of your figures}\label{fig:1}
-\end{figure}
-
-
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=15cm]{logos}
-\end{center}
-\caption{This is a figure with sub figures, \textbf{(A)} is one logo, \textbf{(B)} is a different logo.}\label{fig:2}
-\end{figure}
-
-%%% If you are submitting a figure with subfigures please combine these into one image file with part labels integrated.
-%%% If you don't add the figures in the LaTeX files, please upload them when submitting the article.
-%%% Frontiers will add the figures at the end of the provisional pdf automatically
-%%% The use of LaTeX coding to draw Diagrams/Figures/Structures should be avoided. They should be external callouts including graphics.
 
 \end{document}
